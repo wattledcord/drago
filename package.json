@@ -1,0 +1,11 @@
+{
+  "name": "drago",
+  "version": "1.0.0",
+  "description": "This is Simple Website which is going to be Large",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "B Madhava reddy",
+  "license": "ISC"
+}
