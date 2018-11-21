@@ -1,0 +1,43 @@
+##Create Employee Tables 
+CREATE TABLE `drago`.`employee` (
+  `idemployee` INT NOT NULL AUTO_INCREMENT,
+  `EmployeeName` VARCHAR(45) NOT NULL,
+  `FirstName` VARCHAR(45) NOT NULL,
+  `LastName` VARCHAR(45) NULL,
+  `PhoneNumber` VARCHAR(45) NULL,
+  `Address` VARCHAR(45) NULL,
+  `Company` VARCHAR(45) NULL,
+  `Designation` VARCHAR(45) NULL,
+  `HighestEducation` VARCHAR(45) NULL,
+  PRIMARY KEY (`idemployee`));
+
+
+
+CREATE PROCEDURE `createemployee` (in EmployeeName VARCHAR(45),in FirstName VARCHAR(45),in LastName VARCHAR(45) ,
+  in PhoneNumber VARCHAR(45),
+  in Address VARCHAR(45) ,
+  in Company VARCHAR(45) ,
+   in Designation VARCHAR(45) ,
+  in HighestEducation VARCHAR(45))
+BEGIN
+insert into employee (EmployeeName,
+  FirstName,
+  LastName,
+  PhoneNumber,
+  Address,
+  Company,
+  Designation,
+  HighestEducation) values (EmployeeName,
+  FirstName,
+  LastName,
+  PhoneNumber,
+  Address,
+  Company,
+  Designation,
+  HighestEducation);
+END
+
+CREATE DEFINER=`mysqluser`@`%` PROCEDURE `Login`(in username varchar(45),in password varchar(15),out yes_no int)
+BEGIN
+select count(*) into yes_no from users u where u.UserName=username&&u.password=password; 
+END
