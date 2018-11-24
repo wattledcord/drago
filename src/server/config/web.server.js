@@ -3,7 +3,7 @@ const bodyParser=require('body-parser');
 export default class WebServer {
   constructor () {
     this.app = express()
-    this.app.use(express.static('dist/public'));
+    this.app.use(express.static('dist'));
     this.app.use(bodyParser.urlencoded({ extended: true }));
     this.app.use(bodyParser.json());
   }

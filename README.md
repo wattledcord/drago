@@ -22,7 +22,7 @@ npm run build
 npm start
 ```
 
-## Testing 
+## Testing
 
 Install postman for testing apis and enter below url and set http method to **POST**
 
@@ -59,5 +59,18 @@ you should get response like
     "changedRows": 0
 }
 ```
+
+## Jest Testing
+
+run below command for webserver and react testing
+
+```cmd
+npm run test
+```
+
+### Testing frame works used
+
+* Jest - for Webserver and to run tests
+* enzyme - for **ReactJS** testing
 
 if there are any errors specify them in issues
