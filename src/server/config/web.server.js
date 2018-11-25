@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser=require('body-parser');
+const config=require('./config')
 export default class WebServer {
   constructor () {
     this.app = express()
@@ -10,7 +11,7 @@ export default class WebServer {
   start () {
     return new Promise((resolve, reject) => {
       try {
-        this.server = this.app.listen(3000, function () {
+        this.server = this.app.listen(config.serverport, function () {
 
           resolve()
         })
