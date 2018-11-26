@@ -12,7 +12,7 @@ ALTER USER '<mysqluser>'@'%' IDENTIFIED WITH mysql_native_password BY '<password
 
 after Mysql setup run queries from sqlqueries file to setup tables and stored procedures required for application.
 
-To change db config details update **db.js** file.
+To change db config details update **/src/server/config/config.js** file.
 
 ## Setup
 
